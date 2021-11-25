@@ -2,7 +2,7 @@
 // import Header from './Header.js';
 // import Footer from './Footer.js';
 import './App.css';
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import MainMenu from "./Components/MainMenu";
 import Quiz from "./Components/Quiz";
 import EndScreen from "./Components/EndScreen";
