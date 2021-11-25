@@ -2,7 +2,7 @@
 // import Header from './Header.js';
 // import Footer from './Footer.js';
 import './App.css';
-import React, {useState} from 'react';
+import React, { useState, useContext } from "react";
 import MainMenu from "./Components/MainMenu";
 import Quiz from "./Components/Quiz";
 import EndScreen from "./Components/EndScreen";
@@ -13,6 +13,8 @@ import { QuizContext } from './Helpers/Contexts';
 
 function App() {
   const [quizState, setQuizState] = useState("menu");
+  const [score, setScore] = useState(0)
+
   return (
     <div className="App">
       {/* <Header />
@@ -23,7 +25,7 @@ function App() {
       </>
       <Footer /> */}
       <h1>Quiz App</h1>
-      <QuizContext.Provider value={{ quizState, setQuizState }}>
+      <QuizContext.Provider value={{ quizState, setQuizState, score, setScore }}>
         {quizState === "menu" && <MainMenu />}
         {quizState === "quiz" && <Quiz />}
         {quizState === "endScreen" && <EndScreen />}
